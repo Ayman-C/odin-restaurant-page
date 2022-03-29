@@ -1,13 +1,45 @@
+body {
+    margin: 0;
+
+}
+
+@font-face {
+    font-family: 'OnsenDemo';
+    src: url('OnsenDemo.ttf');
+}
+
 #tabs {
     display:flex;
     justify-content:left;
 }
 #title{
-    margin: 16px 0;
+    font-family: OnsenDemo;
+    margin: 16px 0 0 0;
+    padding-left: 8px;
 }
+
+img[src="../src/sashimi.jpg"] {
+  width: 100vw;  
+  height:92vh;
+}
+
 #headline {
-    width: 100%;
+    width: 85%;
     display:flex;
     list-style: none;
-    justify-content: space-around;
+    justify-content: center;
+    margin: 16px 0 0 0;
+}
+
+li {
+    font-family: OnsenDemo;
+    text-align: center;
+    width:25%;
+    /* padding-left: 12.5%; */
+}
+
+footer {
+    text-align: center;
+    padding-bottom: 4px;
+    border-top:1px  solid grey;
 }
