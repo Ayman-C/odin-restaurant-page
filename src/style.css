@@ -8,22 +8,22 @@ body {
     src: url('OnsenDemo.ttf');
 }
 
-#tabs {
+header {
     display:flex;
     justify-content:left;
+    font-family: OnsenDemo;
 }
 #title{
-    font-family: OnsenDemo;
     margin: 16px 0 0 0;
     padding-left: 8px;
 }
 
-img[src="../src/sashimi.jpg"] {
+.mainImage {
   width: 100vw;  
   height:92vh;
 }
 
-#headline {
+#tabs {
     width: 85%;
     display:flex;
     list-style: none;
@@ -32,7 +32,6 @@ img[src="../src/sashimi.jpg"] {
 }
 
 li {
-    font-family: OnsenDemo;
     text-align: center;
     width:25%;
     /* padding-left: 12.5%; */
