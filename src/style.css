@@ -22,6 +22,11 @@ header {
   width: 100vw;  
   height:92vh;
 }
+.aboutImage, .contactImage {
+    width: 50vw;  
+    height:92vh;
+    margin-right: 5%;
+  }
 
 #tabs {
     width: 85%;
@@ -41,4 +46,38 @@ footer {
     text-align: center;
     padding-bottom: 4px;
     border-top:1px  solid grey;
+}
+
+#dataContainer {
+    display: flex;
+    justify-content: space-between;
+}
+.aboutText, .contactText{
+    width: 50%;
+    justify-self: center;
+    align-self: center;
+    margin-right: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.contactText{
+    width: 100%;
+}
+
+#contactContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-self: center;
+    align-self: center;
+    margin-right: 5%;
+}
+
+iframe {
+    margin-top: 10%;
+    width: 300px;
+    height: 225px;
+    border: 0;
+    align-self: center;
 }

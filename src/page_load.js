@@ -1,15 +1,10 @@
-//import './style.css';
-//import sashimiOne from "../src/sashimi.jpg"
-
 const contentElement=document.querySelector('#content');
 const tabsList=["home","menu","about","contact"];
 
-export function loadImage(myImage) {
-    const imgElement=document.createElement('img');
-    imgElement.src=myImage;
-    imgElement.classList.add('mainImage');
-    imgElement.alt="Japanese food display";
-    contentElement.append(imgElement);
+export function loadDataContainer(){
+    const divElement=document.createElement('div');
+    divElement.id="dataContainer";
+    contentElement.appendChild(divElement);
 }
 export function loadHeader(){
     const headerElement=document.createElement('header');
@@ -23,8 +18,7 @@ export function loadHeader(){
     ulElement.id="tabs";
     createList(ulElement,tabsList)
     headerElement.append(ulElement);
-    
-    
+
     contentElement.append(headerElement);
 }
 export function loadFooter() {
@@ -34,7 +28,6 @@ export function loadFooter() {
     
     footerElement.append(createLink('https://noahtype.com/onsen-japan-font/'," Font name Onsen"));
     footerElement.append(createLink('https://www.pexels.com/'," & Pictures from Pexels"));
-
 }
 
 function createLink(link,textContent) {
@@ -55,4 +48,6 @@ function createList(ulItem,list){
 
     return ulItem;
 }
+
+
 
