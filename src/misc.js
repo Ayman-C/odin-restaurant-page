@@ -3,9 +3,6 @@ export function createImage(myImage,myClass,myAlt) {
     imgElement.src=myImage;
     imgElement.classList.add(myClass);
     imgElement.alt=myAlt;
-    //const divElement=document.createElement('div');
-    //divElement.id=`#${myClass}`
-    //divElement.appendChild(imgElement)
     return imgElement
 }
 export function createTextContent(myText,myClass) {
@@ -18,4 +15,15 @@ export function createTextContent(myText,myClass) {
 export function appendElement(element,myContainerId) {
     const Element=document.querySelector(myContainerId);
     Element.append(element);
+}
+
+export function removeTextColor(tabList){
+    tabList.forEach(tab => tab.style.color="black")
+}
+
+
+export function removeAllChildNodes(parentNode){
+    while(parentNode.firstChild){
+        parentNode.removeChild(parentNode.firstChild)
+    }
 }

@@ -7,8 +7,6 @@ export function loadMenuTab() {
     appendElement(imgElement,"#dataContainer");
     const imgMenuElement=createImage("../src/img/menu.jpg","menuImage","Restaurant food menu");
     appendElement(imgMenuElement,"#dataContainer");
-    // const textElement=createTextContent(menuText,"menuText")
-    // appendElement(textElement,"#dataContainer");
 }
 
 

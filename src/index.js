@@ -5,13 +5,7 @@ import {loadHomeTab} from './home.js'
 import {loadAboutTab} from './about.js'
 import {loadContactTab} from './contact.js'
 import {loadMenuTab} from './menu.js'
-
-
-loadDataContainer();
-loadHomeTab()
-loadHeader();
-loadFooter();
-
+import { removeTextColor, removeAllChildNodes } from './misc';
 const LoadSelector = {
     "home" : function(){loadHomeTab()},
     "about" : function(){loadAboutTab()},
@@ -19,25 +13,33 @@ const LoadSelector = {
     "menu" : function(){loadMenuTab()}
     };
 
-const tabList=document.querySelectorAll("li");
-const dataContainer=document.querySelector("#dataContainer")
-
-tabList.forEach(tab => tab.addEventListener("click",function(){
-    removeAllChildNodes(dataContainer);
-    LoadSelector[this.textContent]();
-        
-}))
+loadDataContainer();
+loadHomeTab()
+loadHeader();
+document.querySelector("#home").style.color="red"
+loadFooter();
+tabsNavigation();
 
 
 
 
-
-
-
-
-
-function removeAllChildNodes(parentNode){
-    while(parentNode.firstChild){
-        parentNode.removeChild(parentNode.firstChild)
-    }
+function tabsNavigation(){
+    const tabList=document.querySelectorAll("li");
+    const dataContainer=document.querySelector("#dataContainer")
+    tabList.forEach(tab => tab.addEventListener("click",function(){
+        removeAllChildNodes(dataContainer);
+        removeTextColor(tabList);
+        LoadSelector[this.textContent]();
+        this.style.color="red";
+    }));
 }
+// function removeTextColor(tabList){
+//     tabList.forEach(tab => tab.style.color="black")
+// }
+
+
+// function removeAllChildNodes(parentNode){
+//     while(parentNode.firstChild){
+//         parentNode.removeChild(parentNode.firstChild)
+//     }
+// }
