@@ -12,6 +12,7 @@ header {
     display:flex;
     justify-content:left;
     font-family: OnsenDemo;
+    border-top:2px solid black;
 }
 #title{
     margin: 16px 0 0 0;
@@ -22,10 +23,14 @@ header {
   width: 100vw;  
   height:92vh;
 }
-.aboutImage, .contactImage {
+.aboutImage, .contactImage, .menuImage {
     width: 50vw;  
     height:92vh;
     margin-right: 5%;
+    flex-shrink: 0;
+  }
+  .menuImage {
+      margin: 0;
   }
 
 #tabs {
@@ -51,8 +56,9 @@ footer {
 #dataContainer {
     display: flex;
     justify-content: space-between;
+    
 }
-.aboutText, .contactText{
+.aboutText, .contactText, .contactPhoneText{
     width: 50%;
     justify-self: center;
     align-self: center;
@@ -60,6 +66,9 @@ footer {
     font-family: Arial, Helvetica, sans-serif;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
+}
+.contactPhoneText {
+    border: none;
 }
 .contactText{
     width: 100%;
@@ -72,6 +81,7 @@ footer {
     justify-self: center;
     align-self: center;
     margin-right: 5%;
+    width: 45%;
 }
 
 iframe {

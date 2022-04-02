@@ -1,15 +1,17 @@
-const contactText="blablab lbalblabl ablbalbla blablbalbl abla blbalb  lablablbalbla blablbal blablablb lbla blablb albl abl abl bal blablab lbalblabl ablbalbla blablbalbl abla blbalb  lablablbalbla blablbal blablablb lbla blablb albl abl abl bal"
-
+const contactText="Hours \r\nOpen 1pm - 10.00pm Sun to Thu \r\n1pm - 11.00pm Fri to Sat \r\nWeekdays we are closed 4:30pm-5:30pm"
+const contactPhoneText="Phone: 0207 - X XXX XXX"
 import { createImage ,appendElement ,createTextContent} from "./misc"
 
 export function loadContactTab() {
     const imgElement=createImage("../src/img/lanterns.jpg","contactImage","Japanese restaurant lanterns");
     appendElement(imgElement,"#dataContainer");
     const textElement=createTextContent(contactText,"contactText")
+    const phoneElement=createTextContent(contactPhoneText,"contactPhoneText")
     const divElement=document.createElement("div");
     divElement.id="contactContainer";
     appendElement(divElement,"#dataContainer");
     appendElement(textElement,"#contactContainer");
+    appendElement(phoneElement,"#contactContainer");
     let iframeElement=addGoogleMap();
     divElement.appendChild(iframeElement)
 }
