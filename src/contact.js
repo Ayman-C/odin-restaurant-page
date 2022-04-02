@@ -1,9 +1,10 @@
 const contactText="Hours \r\nOpen 1pm - 10.00pm Sun to Thu \r\n1pm - 11.00pm Fri to Sat \r\nWeekdays we are closed 4:30pm-5:30pm"
 const contactPhoneText="Phone: 0207 - X XXX XXX"
 import { createImage ,appendElement ,createTextContent} from "./misc"
+import myImage from "../src/img/lanterns.jpg"
 
 export function loadContactTab() {
-    const imgElement=createImage("../src/img/lanterns.jpg","contactImage","Japanese restaurant lanterns");
+    const imgElement=createImage(myImage,"contactImage","Japanese restaurant lanterns");
     appendElement(imgElement,"#dataContainer");
     const textElement=createTextContent(contactText,"contactText")
     const phoneElement=createTextContent(contactPhoneText,"contactPhoneText")

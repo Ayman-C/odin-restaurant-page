@@ -20,9 +20,6 @@ document.querySelector("#home").style.color="red"
 loadFooter();
 tabsNavigation();
 
-
-
-
 function tabsNavigation(){
     const tabList=document.querySelectorAll("li");
     const dataContainer=document.querySelector("#dataContainer")
@@ -33,13 +30,3 @@ function tabsNavigation(){
         this.style.color="red";
     }));
 }
-// function removeTextColor(tabList){
-//     tabList.forEach(tab => tab.style.color="black")
-// }
-
-
-// function removeAllChildNodes(parentNode){
-//     while(parentNode.firstChild){
-//         parentNode.removeChild(parentNode.firstChild)
-//     }
-// }
